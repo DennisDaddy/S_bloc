@@ -16,6 +16,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @post = post.find(params[:id])
   end
 
   def edit
