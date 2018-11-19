@@ -2,7 +2,7 @@
 
 <div class="container">
    <% @posts.each do |post| %>
-  <h3> <%= post.title %></h3><br>
+  <h3> <%= link_to post.title, post %></h3><br>
     <%= post.content %>
    <% end %>
 </div>
