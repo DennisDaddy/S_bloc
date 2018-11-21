@@ -1,8 +1,14 @@
 <h1 align="center">Show post</h1>
 <h3><%= @post.title %></h3>
 <p><%= @post.title %></p>
-
-<br><br><br>
+<br>
+<hr>
+<h3 align="center">Comments</h3>
+<h2><strong><%= @post.comments.count %> <strong>Comments</h2>
+<%= render @post.comments %>
+<hr>
+<h3>Leave a Reply</h3>
+<%= render 'comments/form' %>
 
 <%= link_to "Edit", edit_post_path(@post) %> |
 <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure? " } %>
