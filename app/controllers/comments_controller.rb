@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    @post = Post.find(params[:post_id])
   end
 
   def edit
